@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrSDT = ['0861245874', '0969876543','0983627093','0213876543'];
+    let arrViettel = [];
+
+    let reg1 = /^[0][8][6][0-9]{7}$/;
+    let reg2 = /^[0][9][678][0-9]{7}$/;
+    let reg3 = /^[0][3][2-9][0-9]{7}$/;
+
+    for (let i =0; i<arrSDT.length; i++) {
+        if (reg1.test(arrSDT[i]) ||reg2.test(arrSDT[i]) ||reg3.test(arrSDT[i]) ) {
+            arrViettel.push(arrSDT[i]);
+        }
+    }
+
+    if (arrViettel.length === 0) {
+        alert("khong co so dien thoai hop le");
+    } else {
+        for (let i =0; i<arrViettel.length; i++) {
+            document.write("So dien thoai viettel la: " + arrViettel[i] + "<br>");
+        }
+    }
+</script>
+</body>
+</html>
